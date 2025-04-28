@@ -1,4 +1,4 @@
-# Change Primary
+# Change Primary User
 
 This script is provided as-is. No guarantee if it works or not; I created it just for my purpose of a recent migration of Intune Devices. Since the primary users didn't set automatically, I created this solution.
 
