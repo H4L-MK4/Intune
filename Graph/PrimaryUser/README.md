@@ -12,7 +12,7 @@ You need to create an application registration in Entra ID. For the configuratio
 
 After that, set the Graph permissions accordingly and grant admin consent with a Global Administrator.
 
-![Graph Permissions]([https://github.com/H4L-MKIII/Intune/blob/main/Graph/PrimaryUser/GraphPermissionshis as the primary user.](https://github.com/H4L-MKIII/Intune/blob/main/Graph/PrimaryUser/GraphPermissions.png)
+![Graph Permissions]
 
 ## Prerequisites
 
