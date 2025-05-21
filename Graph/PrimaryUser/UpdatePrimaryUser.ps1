@@ -117,7 +117,7 @@ function Update-PrimaryUser {
   $hdrs = $authHeader + @{ "Content-Type" = "application/json" }
   try {
     Invoke-RestMethod -Uri $uri -Headers $hdrs -Method Post -Body $body
-    Write-Output "✅ Assigned primary user '$($newUserUpn)' to device $($deviceId)"
+    Write-Output "ADD - Assigned primary user '$($newUserUpn)' to device $($deviceId)"
   } catch {
     Write-Warning "Failed to assign primary user on $($deviceId): $($_)"
   }
@@ -157,12 +157,12 @@ foreach ($dev in $devices) {
 
   if ($last -ne $primary) {
     if ($primary) {
-      Write-Output "🔄 Changing primary for $($intuneId) from '$($primary)' to '$($last)'"
+      Write-Output "CHANGE - Changing primary for $($intuneId) from '$($primary)' to '$($last)'"
     } else {
-      Write-Output "➕ No primary set on $($intuneId); setting to '$($last)'"
+      Write-Output "CHECK - No primary set on $($intuneId); setting to '$($last)'"
     }
     Update-PrimaryUser -deviceId $intuneId -newUserUpn $last
   } else {
-    Write-Output "✔️  $($intuneId) already correct ($($last))"
+    Write-Output "CHECK - $($intuneId) already correct ($($last))"
   }
 }
