@@ -1,6 +1,6 @@
 # Change Primary User
 
-This script is provided as-is. No guarantee if it works or not; I created it just for my purpose of a recent migration of Intune Devices. Since the primary users didn't set automatically, I drafted this script.
+This script is provided as-is. No guarantee if it works or not. I'm not 100% sure if all of the permissions are nessecary, as i used the permissions from a migration test from the getrubix migration V8 script, but it worked for me.
 
 ## Script Details
 
@@ -11,7 +11,6 @@ You need to create an application registration in Entra ID. For the configuratio
 - Secret Key (from the created application)
 
 After that, set the Graph permissions accordingly and grant admin consent with a Global Administrator.
-Note: I'm not 100% sure if all of the permissions are nessecary, as i used it like i said from a migration script, which needed those permissions.
 
 ![Graph Permissions](https://github.com/H4L-MKIII/Intune/blob/main/Graph/PrimaryUser/GraphPermissions.png)
 
